@@ -1,13 +1,13 @@
 # credit_score
 
-This is an assessment for the Food Panda technical test with the following questions
+This is an assessment for the Food Panda technical test with the following questions and my answers below!
 
 Please follow the steps described below:
 1) Sign up at kaggle.com (if you are not yet a user) and go to https://www.kaggle.com/c/GiveMeSomeCredit, read through the description of the challenge, download the data files
 2) Objective: solve the above challenge.
 3) Please submit your code (preferably in Python and with a github repo or a link to your source code, with .git folder) and also answer the following questions:
 ---
-1. Tell us how you validate your model, which, and why you chose such evaluation technique(s).
+### 1. Tell us how you validate your model, which, and why you chose such evaluation technique(s).
   - Experiment with a few different families of models:
     - Why? To make sure I choose the best class of algorithms to solve this
   - Conduct a 5-fold split:
@@ -17,12 +17,12 @@ Please follow the steps described below:
   - Hyper-parameter tuning:
     - Why? Optimise this model
 ---
-2. What is AUC? 
+### 2. What is AUC? 
 - AUC is the area under the ROC curve, with axes TPR=Recall, FPR=1-Precision, at different thresholds. Therefore the higher the AUC, the better the model is generally. 
 - However, if you have a lot of negative examples as in this dataset, it does not get punished. This will be illustrated in the summary of Question 5.
 ---
 
-3. Why do you think AUC was used as the evaluation metric for such a problem? 
+### 3. Why do you think AUC was used as the evaluation metric for such a problem? 
 - As a competitive metric, it removes the need for thresholds in deciding who has the best model - which is actually an extra hyperparameter that may be over-optimised depending on the dataset. 
 - A high AUC also looks good for the competition hosts and participants (compared to ranking problems where metrics such as precision@k are normally <0.3) that may look more daunting. Not too sure about other reasons.
 
@@ -31,7 +31,7 @@ Relevant links:
 - https://www.kaggle.com/c/ieee-fraud-detection/discussion/99982
 ---
 
-4. What are other metrics that you think would also be suitable for this competition?
+### 4. What are other metrics that you think would also be suitable for this competition?
 
 There are a range of other classification metrics we can choose from - below are the common ones that are useful for this problem. 
 
@@ -81,11 +81,17 @@ Of course the assumption is that this is just a point in the TPR/FPR curve, but 
 
 ---
 
-5. What insight(s) do you have from your model? What is your preliminary analysis of the given dataset?
+### 5. What insight(s) do you have from your model? What is your preliminary analysis of the given dataset?
+- **Ans:** The detailed answers (esp. for Qn 5) are provided in the notebook itself within the markdown cells (coloured for convenience)
 
 ---
 
-6. Can you get into the top 100 of the private leaderboard, or even higher?
+### 6. Can you get into the top 100 of the private leaderboard, or even higher?
     - **Ans:** Unfortunately no, I could only get into the top 150 with my submissions (AUC=0.86651). With more pre-processing of the data, I think it is definitely possible. I tried to hack it by fine-tuning the model, but as in any Data Science problem, the Data is the main bulk of the problem!
 
-The detailed answers (esp. for 5) are provided in the notebook itself within the markdown cells (coloured for convenience)
+## Running the notebook
+
+Run the following commands to run the notebook!
+1. `conda env create -f environment.yml`
+2. `conda activate fp`
+3. `jupyter notebook`
